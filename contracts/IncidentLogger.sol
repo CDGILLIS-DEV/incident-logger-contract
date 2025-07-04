@@ -11,7 +11,7 @@ contract IncidentLogger {
         uint256 timestamp;
     }
 
-    Incident[] public incidents; // Array of incidents
+    Incident[] public incidents; // Public Array of incidents 
 
     event IncidentLogged(
         address indexed reporter,
