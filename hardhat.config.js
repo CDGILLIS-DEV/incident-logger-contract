@@ -1,12 +1,16 @@
+require("dotenv").config();
 require("@nomicfoundation/hardhat-toolbox");
+
+const SEPOLIA_RPC_URL = process.env.SEPOLIA_RPC_URL;
+const PRIVATE_KEY = process.env.PRIVATE_KEY;
 
 /** @type import('hardhat/config').HardhatUserConfig */
 module.exports = {
   solidity: "0.8.28",
   networks: {
     sepolia: {
-      url: "https://sepolia.infura.io/v3/incident-logger",
-      accounts: ["a343641c82d99e61589efb4a75380ed9a876ad681fb3b87879f49ed6c05c2ed9"]
+      url: SEPOLIA_RPC_URL,
+      accounts: [PRIVATE_KEY]
     }
   }
 };
